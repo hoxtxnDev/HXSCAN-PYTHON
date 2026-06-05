@@ -28,12 +28,15 @@ def trabajador(target, cola_puertos):
         escanear_puerto(target, puerto)
         cola_puertos.task_done()
 
-def main():
     # 1. Planificación de Argumentos de Consola
-    parser = argparse.ArgumentParser(description="Escáner de puertos concurrente para auditorías.")
-    parser.add_argument("-t", "--target", required=True, help="IP o dominio del objetivo")
-    parser.add_argument("-p", "--ports", default="21,22,80,443,8080", help="Puertos separados por comas")
-    args = parser.parse_args()
+    try:
+        parser = argparse.ArgumentParser(description="Escáner de puertos concurrente para auditorías.")
+        parser.add_argument("-t", "--target", required=True, help="IP o dominio del objetivo")
+        parser.add_argument("-p", "--ports", default="21,22,80,443,8080", help="Puertos separados por comas")
+        args = parser.parse_args()
+    except Exception as e:
+        print(f"[!] Error al parsear argumentos: {e}")
+        sys.exit()
 
     # 2. Resolución de DNS
     try:
