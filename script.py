@@ -57,7 +57,7 @@ def trabajador(target, cola_puertos):
 
     # 5. Lanzar los hilos en paralelo (Multithreading)
     # Usamos un máximo de 10 hilos concurrentes para no saturar la red
-    num_hilos = min(10, len(lista_puertos))
+    num_hilos = min(50, len(lista_puertos))
     for _ in range(num_hilos):
         t = threading.Thread(target=trabajador, args=(ip_objetivo, cola))
         t.daemon = True  # Permite cerrar el script con Ctrl+C limpiamente
