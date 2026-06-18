@@ -14,8 +14,8 @@ Escáner de puertos TCP concurrente para auditorías de ciberseguridad.
 ## Instalación
 
 ```bash
-git clone <repo-url>
-cd CLI-PYTHON-CIBERSEGURIDAD
+git clone https://github.com/hoxtxnDev/HXSCAN---PYTHON.git
+cd HXSCAN---PYTHON
 python hxscan.py --help
 ```
 
