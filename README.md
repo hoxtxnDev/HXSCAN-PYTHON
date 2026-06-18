@@ -1,4 +1,4 @@
-# hxscan
+#  𓁹 HXSCAN  𓁹
 
 Escáner de puertos TCP concurrente para auditorías de ciberseguridad.  
 **100% stdlib — sin dependencias externas.**
